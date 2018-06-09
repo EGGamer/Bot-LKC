@@ -49,7 +49,7 @@ bot.on("message", function(message){
           embed.setDescription(message.author + " ha reportado un error");
           embed.setColor(0xef3939);
           //message.channel.send(embed);
-         message.guild.channels.find("reportes", "Taberna Secreta de LKC").send(embed);
+         message.guild.channels.find("reportes").send(embed);
         }else 
         {
           message.channel.send("Necesitas describir el error!")
