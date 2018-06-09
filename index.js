@@ -42,11 +42,11 @@ bot.on("message", function(message){
        break;  
 
         case "reportar":
-        if (args[2])
+        if (args[1])
       {
           var embed = new Discord.RichEmbed()
           embed.setTitle("Error Reportado");
-          embed.setDescription(" ha reportado un error:" + args);
+          embed.setDescription(" ha reportado un error:" + (args - "reportar"));
           embed.setColor(0xef3939);
           message.channel.send(message.author + " ha reportado lo siguiente: " + args)
          // message.guild.channels.find("Taberna Secreta de LKC", "reportes").send("Hola");
