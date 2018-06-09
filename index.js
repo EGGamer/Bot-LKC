@@ -33,22 +33,37 @@ bot.on("message", function(message){
        message.channel.send("¿Necesitas mi ayuda? Soy un kraken, no sé si voy a ser de mucha ayuda, pero aquí tienes mi wiki: ```https://github.com/EGGamer/Bot-LKC/wiki```");
        message.delete();
        break;  
-                 
-       case "botinoperativo":
+      
        
+      case "botinoperativo":
+            message.delete();
+            if (message.channel.name == "anuncios-server"){
             var embed = new Discord.RichEmbed()
             embed.setColor(0xf85959);     
             embed.setTitle("BOT INOPERATIVO");
             embed.setDescription("El bot no se podrá usar hasta nuevo aviso. @everyone");
             embed.setThumbnail("https://cdn.discordapp.com/avatars/454682928769663007/14ac96f716c195bf55d7373778bd092c.png");
             embed.setTimestamp();
-            message.delete();
             message.channel.send(embed);
+            }
         break;
-       case "nuevasreps":
-       {
 
+       case "nuevasreps":
+       {  message.delete();
+        if (message.channel.name == "reputaciones-actuales"){
+          var embed = new Discord.RichEmbed()
+          embed.setColor(0x39efbf);
+          embed.setTitle("Reputaciones Actuales");
+          embed.addField("EG Gamer", "**37**, **37**, **38**, **2**");
+          embed.addField("Hyren", "**37**, **39**, **37**, **2**");
+          embed.addField("Fran", "**30**, **28**, **27**, **1**");
+          embed.addField("Carlis", "**?**, **?**, **?**, **?**");
+          embed.addField("Cutu", "**?**, **?**, **?**, **?**");
+          embed.setImage("https://i.imgur.com/ypara7v.png");
+          message.channel.send(embed);
+          }
        }
+       break;
         default:
         message.channel.send("```Comando no válido```");
       }
