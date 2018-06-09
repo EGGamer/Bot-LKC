@@ -96,7 +96,7 @@ bot.on("message", function(message){
        message.channel.send(embed);
        break;
 
-       case "e3EA":
+       case "e3ea":
        message.delete();
        var embed = new Discord.RichEmbed()
        embed.setColor(0xe7932f);
