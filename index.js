@@ -84,7 +84,7 @@ bot.on("message", function(message){
           }
        }
        break;
-
+       //E3
        case "infoe3":
        message.delete();
        var embed = new Discord.RichEmbed()
@@ -95,9 +95,22 @@ bot.on("message", function(message){
        embed.setImage("https://cdn.discordapp.com/attachments/375828283704475649/454744052034961449/unknown.png");
        message.channel.send(embed);
        break;
+
+       case "e3EA":
+       message.delete();
+       var embed = new Discord.RichEmbed()
+       embed.setColor(0xe7932f);
+       embed.setTitle("¡Hoy conferencia de EA!");
+       embed.setDescription("Hoy tenemos la conferencia de Electronic Arts, que comienza hoy a las 20:00 hora España peninsular.");
+       embed.setThumbnail("https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Electronic-Arts-Logo.svg/1200px-Electronic-Arts-Logo.svg.png");
+       embed.setImage("https://cdn.discordapp.com/attachments/375828283704475649/454744052034961449/unknown.png");
+       message.channel.send(embed);
+       break;
         default:
         message.channel.send("```Comando no válido```");
       }
+
+      
 
 });
 bot.login(process.env.TOKEN);
