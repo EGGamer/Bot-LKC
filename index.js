@@ -42,7 +42,7 @@ bot.on("message", function(message){
        break;  
 
         case "reportar":
-        if (args[1])
+        if (args[2])
       {
           var embed = new Discord.RichEmbed()
           embed.setTitle("Error Reportado");
