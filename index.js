@@ -51,7 +51,7 @@ bot.on("message", function(message){
           message.guild.channels.find("reportes", "reportes").send(args);
         }else 
         {
-          message.channel.send(message.author.toString() + " necesitas describir el error!")
+          message.channel.send("Necesitas describir el error!")
         }
       break;
       
