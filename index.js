@@ -86,6 +86,7 @@ bot.on("message", function(message){
        break;
 
        case "infoe3":
+       message.delete();
        var embed = new Discord.RichEmbed()
        embed.setColor(0xe73d2f);
        embed.setTitle("¡Comienza el E3 2018!");
