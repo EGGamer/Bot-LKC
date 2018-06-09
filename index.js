@@ -94,15 +94,19 @@ bot.on("message", function(message){
        embed.setThumbnail("https://i.imgur.com/aGczqta.png");
        embed.setImage("https://cdn.discordapp.com/attachments/375828283704475649/454744052034961449/unknown.png");
        message.channel.send(embed);
+       break;
+
        case "e3bethesda":
        message.delete();
        var embed = new Discord.RichEmbed()
        embed.setColor(0xbcaf45);
        embed.setTitle("¡Conferencia de Bethesda!");
-       embed.setDescription("Otra de las conferencias de hoy es la de Bethesda. Aunque en españa es a las 3:30/2:30, en el resto de países es hoy. Esperamos qeu muestren algo sobre Fallout 76 en su conferencia.");
+       embed.setDescription("Otra de las conferencias de hoy es la de Bethesda. Aunque en españa es a las 3:30/2:30, en el resto de países es hoy. Esperamos que muestren algo sobre Fallout 76 en su conferencia.");
        embed.setThumbnail("https://www.gameit.es/wp-content/uploads/2017/06/Bethesda-933x467.png");
        embed.setImage("https://cdn.discordapp.com/attachments/375828283704475649/454744052034961449/unknown.png");
        message.channel.send(embed);
+       break;
+
         default:
         message.channel.send("```Comando no válido```");
       }
