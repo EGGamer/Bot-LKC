@@ -107,6 +107,61 @@ bot.on("message", function(message){
        message.channel.send(embed);
        break;
 
+       case "e3square":
+       message.delete();
+       var embed = new Discord.RichEmbed()
+       embed.setColor(0x3b3b3b);
+       embed.setTitle("¡Conferencia de Squere Enix!");
+       embed.setDescription("La primera conferencia de hoy es la de Square Enix. No sabemos que presentarán. La conferencia será a las 19:00 hora España peninsular.");
+       embed.setThumbnail("https://vignette.wikia.nocookie.net/nier/images/f/fb/Square_Enix_Logo.png/revision/latest?cb=20170607234547&path-prefix=es");
+       embed.setImage("https://cdn.discordapp.com/attachments/375828283704475649/454744052034961449/unknown.png");
+       message.channel.send(embed);
+       break;
+
+       case "e3bugisoft":
+       message.delete();
+       var embed = new Discord.RichEmbed()
+       embed.setColor(0x4a60a5);
+       embed.setTitle("¡Conferencia de Ubisoft!");
+       embed.setDescription("La segunda conferencia de hoy es de Ubisoft. Sabremos que enseñarán algo del nuevo Assasins Creed. La conferencia es a las 22:00 hora España peninsular.");
+       embed.setThumbnail("https://upload.wikimedia.org/wikipedia/en/thumb/a/a0/Ubisoft_2017.svg/1200px-Ubisoft_2017.svg.png");
+       embed.setImage("https://cdn.discordapp.com/attachments/375828283704475649/454744052034961449/unknown.png");
+       message.channel.send(embed);
+       break;
+
+       case "e3pcgaming":
+       message.delete();
+       var embed = new Discord.RichEmbed()
+       embed.setColor(0xaa0000);
+       embed.setTitle("¡Conferencia de PC Gaming!");
+       embed.setDescription("La tercera conferencia de hoy es de PC Gaming. No sabremos que presentarán. La conferencia empieza a las 00:00 hora españa peninsular.");
+       embed.setThumbnail("https://storage.googleapis.com/improbable-cms-json/production/wp-uploads/2016/12/PCG_Logo_HiRes.png");
+       embed.setImage("https://cdn.discordapp.com/attachments/375828283704475649/454744052034961449/unknown.png");
+       message.channel.send(embed);
+       break;
+
+       case "e3sony":
+       message.delete();
+       var embed = new Discord.RichEmbed()
+       embed.setColor(0x273acb);
+       embed.setTitle("¡Conferencia de Sony!");
+       embed.setDescription("La última conferencia de hoy es de Sony. ¿Presentarán algo sobre la nueva Play Station? La conferencia comienza a las 3:00 hora España peninsular.");
+       embed.setThumbnail("http://www.pilasybateriasuniversales.com/img/cms/sony_logo_PNG2.png");
+       embed.setImage("https://cdn.discordapp.com/attachments/375828283704475649/454744052034961449/unknown.png");
+       message.channel.send(embed);
+       break;
+
+       case "e3nintendo":
+       message.delete();
+       var embed = new Discord.RichEmbed()
+       embed.setColor(0xff0000);
+       embed.setTitle("¡Nintendo Direct E3!");
+       embed.setDescription("La última `Conferencia´ del E3 es el Nintendo Direct de Nintendo (valga la redundancia). Será un E3 de 30 minuticos, en el cual esperamos qeu rpesenten el nuevo Super Smash Bros, para Nintendo Switch. La hora es a als 18:00 hora España peninsular.");
+       embed.setThumbnail("http://logok.org/wp-content/uploads/2014/12/Nintendo-logo-red.png");
+       embed.setImage("https://cdn.discordapp.com/attachments/375828283704475649/454744052034961449/unknown.png");
+       message.channel.send(embed);
+       break;
+
         default:
         message.channel.send("```Comando no válido```");
       }
