@@ -41,7 +41,7 @@ bot.on("message", function(message){
        message.delete();
        break;  
 
-        /*case "reportar":
+        case "reportar":
         if (args[1])
       {
           var embed = new Discord.RichEmbed()
@@ -49,12 +49,12 @@ bot.on("message", function(message){
           embed.setDescription(message.author + " ha reportado un error");
           embed.setColor(0xef3939);
           //message.channel.send(embed);
-         message.guild.channels.find("reportes").send(embed);
+         bot.channels.find("reportes", "reportes").send(embed);
         }else 
         {
-          message.channel.send("Necesitas describir el error!")
+          message.channel.send("¡Necesitas describir el error!")
         }
-      break;*/
+      break;
       
       case "botinoperativo":
             message.delete();
