@@ -85,27 +85,15 @@ bot.on("message", function(message){
        }
        break;
        //E3
-       case "infoe3":
+       case "e3microsoft":
        message.delete();
        var embed = new Discord.RichEmbed()
-       embed.setColor(0xe73d2f);
-       embed.setTitle("¡Comienza el E3 2018!");
-       embed.setDescription("El E3 ya está aquí, desde hoy día 9 de junio hasta el día 12 serán las conferencias. Iremos avisando sobre cuando empieza cada conferencia.");
-       embed.setThumbnail("https://upload.wikimedia.org/wikipedia/commons/b/b0/E3_Logo.png");
+       embed.setColor(0x6cbc45);
+       embed.setTitle("¡Conferencia de Microsoft!");
+       embed.setDescription("Una de las conferencias de hoy es la de Microsoft. Una de las cosas que se presentarán son noticias sobre contenido para Sea of Thieves. la conferencia es a las 22:00 hora España peninsular");
+       embed.setThumbnail("https://i.imgur.com/aGczqta.png");
        embed.setImage("https://cdn.discordapp.com/attachments/375828283704475649/454744052034961449/unknown.png");
        message.channel.send(embed);
-       break;
-
-       case "e3ea":
-       message.delete();
-       var embed = new Discord.RichEmbed()
-       embed.setColor(0xe7932f);
-       embed.setTitle("¡Hoy conferencia de EA!");
-       embed.setDescription("Hoy tenemos la conferencia de Electronic Arts @everyone , que comienza hoy a las 20:00 hora España peninsular.");
-       embed.setThumbnail("https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Electronic-Arts-Logo.svg/1200px-Electronic-Arts-Logo.svg.png");
-       embed.setImage("https://cdn.discordapp.com/attachments/375828283704475649/454744052034961449/unknown.png");
-       message.channel.send(embed);
-       break;
         default:
         message.channel.send("```Comando no válido```");
       }
