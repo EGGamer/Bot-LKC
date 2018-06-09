@@ -49,7 +49,7 @@ bot.on("message", function(message){
           embed.setDescription(message.author + " ha reportado un error");
           embed.setColor(0xef3939);
           //message.channel.send(embed);
-         bot.channels.find("Taberna Secreta de LKC", "reportes").send(embed);
+         bot.channels.find("Taberna Secreta de LKC", "reportes").send("hola");
         }else 
         {
           message.channel.send("¡Necesitas describir el error!")
