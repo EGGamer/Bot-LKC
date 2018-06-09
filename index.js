@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-const TOKEN = "NDU0NjgyOTI4NzY5NjYzMDA3.DfxABA.l13hbB1r309rBb1K6eoJxDfXnD4";
+const TOKEN = "NDU0OTg3NzcyMTI2ODIyNDIw.Df1b5g.1v7Vjhj85qiGNdcMUVUx7KZlxNk";
 const PREFIX = "-k ";
 
 var bot = new Discord.Client();
