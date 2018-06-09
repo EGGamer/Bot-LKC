@@ -156,7 +156,7 @@ bot.on("message", function(message){
        var embed = new Discord.RichEmbed()
        embed.setColor(0xff0000);
        embed.setTitle("¡Nintendo Direct E3!");
-       embed.setDescription("La última `Conferencia´ del E3 es el Nintendo Direct de Nintendo (valga la redundancia). Será un E3 de 30 minuticos, en el cual esperamos qeu rpesenten el nuevo Super Smash Bros, para Nintendo Switch. La hora es a als 18:00 hora España peninsular.");
+       embed.setDescription("La última `Conferencia´ del E3 es el Nintendo Direct de Nintendo (valga la redundancia). Será un E3 de 30 minuticos, en el cual esperamos que presenten el nuevo Super Smash Bros, para Nintendo Switch. La hora es a als 18:00 hora España peninsular.");
        embed.setThumbnail("http://logok.org/wp-content/uploads/2014/12/Nintendo-logo-red.png");
        embed.setImage("https://cdn.discordapp.com/attachments/375828283704475649/454744052034961449/unknown.png");
        message.channel.send(embed);
