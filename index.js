@@ -43,17 +43,14 @@ bot.on("message", function(message){
        break;  
 
         case "reportar":
-        if (args[1])
-      {
+        
           var embed = new Discord.RichEmbed()
           embed.setTitle("Error Reportado");
           embed.setDescription(message.author + " ha reportado un error:" + message.content);
           embed.setColor(0xef3939);
           message.channel.send(embed);
           //bot.channels.find("Taberna Secreta de LKC", "reportes").send("hola");
-        }else {message.author.toString + " debes describir el error!"};   
-
-      break;
+         break;
       
       case "botinoperativo":
             message.delete();
