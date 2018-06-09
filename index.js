@@ -24,17 +24,32 @@ bot.on("message", function(message){
       { 
         case "ping":
              message.channel.send("Pong!");
-             break;               
+             break;   
+
         case "info":
         message.channel.send("!Soy el Kraken! ¡Soy el guardián de este servidor! He sido creado por **EG Gamer** y **Aeirety**")
         message.delete();
-        break;       
+        break;  
+
         case "ayuda":
        message.channel.send("¿Necesitas mi ayuda? Soy un kraken, no sé si voy a ser de mucha ayuda, pero aquí tienes mi wiki: ```https://github.com/EGGamer/Bot-LKC/wiki```");
        message.delete();
        break;  
-      
-       
+/*
+        case "reportar":
+        if (args[1])
+      {
+          var embed = new Discord.RichEmbed()
+          embed.setTitle("Error Reportado");
+          embed.setDescription(" ha reportado un error:" /*+ args);
+          embed.setColor(0xef3939);
+          m
+        }else 
+        {
+          message.channel.send(message.guild.member + " necesitas describir el error!")
+        }
+      break;
+      */
       case "botinoperativo":
             message.delete();
             if (message.channel.name == "anuncios-server"){
@@ -69,4 +84,4 @@ bot.on("message", function(message){
       }
 
 });
-bot.login(TOKEN);
+bot.login(process.env.TOKEN);
