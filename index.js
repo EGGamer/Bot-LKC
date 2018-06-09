@@ -40,21 +40,21 @@ bot.on("message", function(message){
        message.channel.send("¿Necesitas mi ayuda? Soy un kraken, no sé si voy a ser de mucha ayuda, pero aquí tienes mi wiki: ```https://github.com/EGGamer/Bot-LKC/wiki```");
        message.delete();
        break;  
-/*
+
         case "reportar":
         if (args[1])
       {
           var embed = new Discord.RichEmbed()
           embed.setTitle("Error Reportado");
-          embed.setDescription(" ha reportado un error:" /*+ args);
+          embed.setDescription(" ha reportado un error:" + args);
           embed.setColor(0xef3939);
-          m
+          message.guild.channels.find("Taberna Secreta de LKC", "reportes").send(args);
         }else 
         {
           message.channel.send(message.guild.member + " necesitas describir el error!")
         }
       break;
-      */
+      
       case "botinoperativo":
             message.delete();
             if (message.channel.name == "anuncios-server"){
