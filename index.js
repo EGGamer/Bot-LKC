@@ -41,7 +41,7 @@ bot.on("message", function(message){
        message.delete();
        break;  
 
-        case "reportar":
+        /*case "reportar":
         if (args[1])
       {
           var embed = new Discord.RichEmbed()
@@ -54,7 +54,7 @@ bot.on("message", function(message){
         {
           message.channel.send("Necesitas describir el error!")
         }
-      break;
+      break;*/
       
       case "botinoperativo":
             message.delete();
