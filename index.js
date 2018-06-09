@@ -28,7 +28,7 @@ bot.on("message", function(message){
         break;
 
         case "ping":
-             message.channel.send("Pong! - Ping!");
+             message.channel.send("Pong!");
              break;   
 
         case "info":
