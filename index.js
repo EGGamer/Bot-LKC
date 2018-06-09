@@ -23,7 +23,7 @@ bot.on("message", function(message){
       switch (args[0].toLowerCase())
       { 
         case "presentacion":
-        message.channel.send("¡HOLA @everyone ! Soy el kraken, el actual bot supremo de este servidor. Me podréis utilizar (casi) siempre que queráis. A medida que pase el tiempo tendré más utilidades. He sido creado por EG Gamer con ayuda de Aeirety. Un saludo grumetes. Y no os portéis mal, ¡que os llevo a las profunfidades del mar!")
+        message.channel.send("¡HOLA @everyone ! Soy el kraken, el actual bot supremo de este servidor. Me podréis utilizar (casi) siempre que queráis. A medida que pase el tiempo tendré más utilidades. He sido creado por EG Gamer. Un saludo grumetes. Y no os portéis mal, ¡que os llevo a las profunfidades del mar!")
         message.delete();
         break;
 
@@ -32,7 +32,7 @@ bot.on("message", function(message){
              break;   
 
         case "info":
-        message.channel.send("!Soy el Kraken! ¡Soy el guardián de este servidor! He sido creado por **EG Gamer** y **Aeirety**")
+        message.channel.send("!Soy el Kraken! ¡Soy el guardián de este servidor! He sido creado por **EG Gamer**. Podríamos decir que es mi padre, pero... ¿Quién es la madre? :thinking: ")
         message.delete();
         break;  
 
