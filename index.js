@@ -101,7 +101,7 @@ bot.on("message", function(message){
        var embed = new Discord.RichEmbed()
        embed.setColor(0xe7932f);
        embed.setTitle("¡Hoy conferencia de EA!");
-       embed.setDescription("Hoy tenemos la conferencia de Electronic Arts, que comienza hoy a las 20:00 hora España peninsular.");
+       embed.setDescription("Hoy tenemos la conferencia de Electronic Arts @everyone , que comienza hoy a las 20:00 hora España peninsular.");
        embed.setThumbnail("https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Electronic-Arts-Logo.svg/1200px-Electronic-Arts-Logo.svg.png");
        embed.setImage("https://cdn.discordapp.com/attachments/375828283704475649/454744052034961449/unknown.png");
        message.channel.send(embed);
