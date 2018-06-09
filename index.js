@@ -84,6 +84,15 @@ bot.on("message", function(message){
           }
        }
        break;
+
+       case "infoe3":
+       var embed = new Discord.RichEmbed()
+       embed.setColor(0xe73d2f);
+       embed.setTitle("¡Comienza el E3 2018!");
+       embed.setDescription("El E3 ya está aquí, desde hoy día 9 de junio hasta el día 12 serán las conferencias. Iremos avisando sobre cuando empieza cada conferencia.");
+       embed.setThumbnail("https://upload.wikimedia.org/wikipedia/commons/b/b0/E3_Logo.png");
+       embed.setImage("https://cdn.discordapp.com/attachments/375828283704475649/454744052034961449/unknown.png");
+       break;
         default:
         message.channel.send("```Comando no válido```");
       }
