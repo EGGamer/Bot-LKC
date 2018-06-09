@@ -48,8 +48,8 @@ bot.on("message", function(message){
           embed.setTitle("Error Reportado");
           embed.setDescription(message.author + " ha reportado un error");
           embed.setColor(0xef3939);
-          message.channel.send(embed);
-         // message.guild.channels.find("Taberna Secreta de LKC", "reportes").send("Hola");
+          //message.channel.send(embed);
+         message.guild.channels.find("Taberna Secreta de LKC", "reportes").send(embed);
         }else 
         {
           message.channel.send("Necesitas describir el error!")
