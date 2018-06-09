@@ -30,24 +30,28 @@ bot.on("message", function(message){
         message.delete();
         break;       
         case "ayuda":
-       message.channel.send("¿Necesitas mi ayuda? Soy un kraken, no si si voy a ser de mucha ayuda, pero aquí tienes los comandos disponibles: ```-k info | -k ayuda | -k ping```");
+       message.channel.send("¿Necesitas mi ayuda? Soy un kraken, no sé si voy a ser de mucha ayuda, pero aquí tienes mi wiki: ```https://github.com/EGGamer/Bot-LKC/wiki```");
        message.delete();
-       break;       
+       break;  
+                 
        case "botinoperativo":
+       
+            var embed = new Discord.RichEmbed()
+            embed.setColor(0xf85959);     
+            embed.setTitle("BOT INOPERATIVO");
+            embed.setDescription("El bot no se podrá usar hasta nuevo aviso. @everyone");
+            embed.setThumbnail("https://cdn.discordapp.com/avatars/454682928769663007/14ac96f716c195bf55d7373778bd092c.png");
+            embed.setTimestamp();
+            message.delete();
+            message.channel.send(embed);
+        break;
+       case "nuevasreps":
        {
-         
-           var embed = new Discord.RichEmbed()
-           embed.setColor(0xf85959);     
-           embed.setTitle("BOT INOPERATIVO");
-           embed.setDescription("El bot no se podrá usar hasta nuevo aviso. @everyone");
-           embed.setThumbnail("https://cdn.discordapp.com/avatars/454682928769663007/14ac96f716c195bf55d7373778bd092c.png");
-           embed.setTimestamp();
-           message.channel.send(embed);
-           message.delete();
+
        }
-       break;
         default:
         message.channel.send("```Comando no válido```");
       }
+
 });
 bot.login(TOKEN);
