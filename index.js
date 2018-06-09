@@ -23,7 +23,7 @@ bot.on("message", function(message){
       switch (args[0].toLowerCase())
       { 
         case "estado":
-        console.log(bot.status.toString());
+        message.channel.send(bot.status.toString());
         break;
         case "presentacion":
         message.channel.send("¡HOLA @everyone ! Soy el kraken, el actual bot supremo de este servidor. Me podréis utilizar (casi) siempre que queráis. A medida que pase el tiempo tendré más utilidades. He sido creado por EG Gamer. Un saludo grumetes. Y no os portéis mal, ¡que os llevo a las profunfidades del mar!")
