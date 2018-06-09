@@ -11,5 +11,13 @@
   "dependencies": {
     "discord.js": "^11.3.2"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EGGamer/Bot-LKC.git"
+  },
+  "bugs": {
+    "url": "https://github.com/EGGamer/Bot-LKC/issues"
+  },
+  "homepage": "https://github.com/EGGamer/Bot-LKC#readme"
 }
