@@ -14,7 +14,7 @@ bot.on("message", async message => {
         
       if (message.author.bot) return;
      
-      //COMMANDS
+
         
       if(message.content.indexOf(config.PREFIX)!== 0) return;
 
