@@ -1,38 +1,40 @@
 const Discord = require("discord.js");
 
-const TOKEN = "NDU0OTg3NzcyMTI2ODIyNDIw.Df1b5g.1v7Vjhj85qiGNdcMUVUx7KZlxNk";
-const PREFIX = "-k";
+const config = require("./config.json");
 
-var bot = new Discord.Client();
+const bot = new Discord.Client();
 
-//Cuando el bot se inicia
+
 bot.on("ready", function(){
     console.log("Ready");
-    bot.user.setActivity("-k Ayuda");
+    bot.user.setActivity("-kAyuda");
 });
-//Cuando El bot detecta mensajes
-bot.on("message", function(message){
-        //Si el que ha mandado un mensaje es el bot, no hace nada.
-      if (message.author.equals(bot.user)) return;
-     //COMANDOS
-        
-      if (!message.content.startsWith(PREFIX)) return;
 
-      var args = message.content.substring(PREFIX.length).split(" ");
+bot.on("message", async message => {
         
-      switch (args[0].toLowerCase())
-      { 
+      if (message.author.bot) return;
      
-        case "presentacion":
+      //COMMANDS
+        
+      if(message.content.indexOf(config.PREFIX)!== 0) return;
+
+      const args = message.content.slice(config.PREFIX.length).trim().split(/ +/g);
+      const command = args.shift().toLowerCase();
+ 
+     
+        if(command == "presentacion"){
         message.channel.send("¡HOLA @everyone ! Soy el kraken, el actual bot supremo de este servidor. Me podréis utilizar (casi) siempre que queráis. A medida que pase el tiempo tendré más utilidades. He sido creado por EG Gamer. Un saludo grumetes. Y no os portéis mal, ¡que os llevo a las profunfidades del mar!")
         message.delete();
-        break;
+        }   
 
-        case "ping":
-             message.channel.send("Pong!");
-             break;   
+        if(command === "ping") {
+          // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
+          // The second ping is an average latency between the bot and the websocket server (one-way, not round-trip)
+          const m = await message.channel.send("Ping?");
+          m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(bot.ping)}ms`);
+        } 
 
-        case "info":
+        /*case "info":
         message.channel.send("!Soy el Kraken! ¡Soy el guardián de este servidor! He sido creado por **EG Gamer**. Podríamos decir que es mi padre, pero... ¿Quién es la madre? :thinking: ")
         message.delete();
         break;  
@@ -158,12 +160,10 @@ bot.on("message", function(message){
        embed.setImage("https://cdn.discordapp.com/attachments/375828283704475649/454744052034961449/unknown.png");
        message.channel.send(embed);
        break;
-
-        default:
-        message.channel.send("```Comando no válido```");
-      }
+       */
+       
 
       
 
 });
-bot.login(process.env.TOKEN);
+bot.login(config.token);
