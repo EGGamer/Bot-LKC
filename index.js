@@ -64,6 +64,21 @@ bot.on("message", async message => {
             embed.setThumbnail("https://cdn.discordapp.com/avatars/454682928769663007/14ac96f716c195bf55d7373778bd092c.png");
             embed.setTimestamp();
             message.channel.send(embed);
+            message.channel.send("@everyone");
+            }
+          }
+
+        if (command === "botoperativo"){
+            message.delete();
+            if (message.channel.name == "anuncios-server"){
+            var embed = new Discord.RichEmbed()
+            embed.setColor(0x99f859);     
+            embed.setTitle("BOT OPERATIVO");
+            embed.setDescription("El bot ya está en funcionamiento.");
+            embed.setThumbnail("https://cdn.discordapp.com/avatars/454682928769663007/14ac96f716c195bf55d7373778bd092c.png");
+            embed.setTimestamp();
+            message.channel.send(embed);
+            message.channel.send("@everyone");
             }
           }
 
