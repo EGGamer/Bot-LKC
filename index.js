@@ -107,6 +107,7 @@ bot.on("message", async message => {
         // send channel a message that you're resetting bot [optional]
         channel.send('Reiniciando bot...')
         .then(msg => client.destroy())
+        console.log("Resseting bot");
         //.then(() => client.login(<your bot token here>));
     }
 });
