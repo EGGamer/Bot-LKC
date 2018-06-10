@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-const config = require("./config.json");
+const config = require("./node_modules/nde.js/config.json");
 
 const bot = new Discord.Client();
 
@@ -166,4 +166,4 @@ bot.on("message", async message => {
       
 
 });
-bot.login(process.env.TOKEN);
+bot.login(process.env.token);
