@@ -34,10 +34,6 @@ bot.on("message", async message => {
           m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(bot.ping)}ms`);
         } 
 
-        if (command === "reset")
-        {
-          resetBot(message.channel);
-        }
         if(command === "info"){
         message.channel.send("!Soy el Kraken! ¡Soy el guardián de este servidor! He sido creado por **EG Gamer**. Podríamos decir que es mi padre, pero... ¿Quién es la madre? :thinking: ")
         message.delete();
@@ -103,12 +99,8 @@ bot.on("message", async message => {
        }
       }
       
-      function resetBot(channel) {
-        // send channel a message that you're resetting bot [optional]
-        channel.send('Reiniciando bot...')
-        .then(msg => bot.destroy() + client.login(token))
-        
-    }
+      
+      
 });
 
 
