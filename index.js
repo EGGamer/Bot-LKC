@@ -34,6 +34,10 @@ bot.on("message", async message => {
           m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(bot.ping)}ms`);
         } 
 
+        if (command === "reset")
+        {
+          resetBot(message.channel);
+        }
         if(command === "info"){
         message.channel.send("!Soy el Kraken! ¡Soy el guardián de este servidor! He sido creado por **EG Gamer**. Podríamos decir que es mi padre, pero... ¿Quién es la madre? :thinking: ")
         message.delete();
@@ -60,7 +64,7 @@ bot.on("message", async message => {
             var embed = new Discord.RichEmbed()
             embed.setColor(0xf85959);     
             embed.setTitle("BOT INOPERATIVO");
-            embed.setDescription("El bot no se podrá usar hasta nuevo aviso. @everyone");
+            embed.setDescription("El bot no se podrá usar hasta nuevo aviso. ");
             embed.setThumbnail("https://cdn.discordapp.com/avatars/454682928769663007/14ac96f716c195bf55d7373778bd092c.png");
             embed.setTimestamp();
             message.channel.send(embed);
@@ -99,6 +103,12 @@ bot.on("message", async message => {
        }
       }
       
+      function resetBot(channel) {
+        // send channel a message that you're resetting bot [optional]
+        channel.send('Reiniciando bot...')
+        .then(msg => client.destroy())
+        //.then(() => client.login(<your bot token here>));
+    }
 });
 
 
