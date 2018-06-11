@@ -45,11 +45,21 @@ bot.on("message", async message => {
        message.delete();
       }  
 
-        if (command === "reportar"){
+        if (command === "reportarerror"){
         
           var embed = new Discord.RichEmbed()
           embed.setTitle("Error Reportado");
           embed.setDescription(message.author + " ha reportado un error:" + message.content);
+          embed.setColor(0xef3939);
+          message.channel.send(embed);
+          //bot.channels.find("Taberna Secreta de LKC", "reportes").send("hola");
+        }
+
+        if (command === "reportarusuario"){
+        
+          var embed = new Discord.RichEmbed()
+          embed.setTitle("Usuario Reportado");
+          embed.setDescription(message.author + " ha reportado un usuario:" + message.content);
           embed.setColor(0xef3939);
           message.channel.send(embed);
           //bot.channels.find("Taberna Secreta de LKC", "reportes").send("hola");
