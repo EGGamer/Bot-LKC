@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+/*const Discord = require("discord.js");
 const configD = require("./node_modules/discord.js/config.json");
 const config = require("./node_modules/token/token.json"); //Testing porpouses
 const bot = new Discord.Client();
@@ -71,13 +71,26 @@ bot.on("message", async message => {
             var embed = new Discord.RichEmbed()
             embed.setColor(0xf85959);     
             embed.setTitle("BOT INOPERATIVO");
-            embed.setDescription("El bot no se podrá usar hasta nuevo aviso. ");
+            embed.setDescription("El bot no se podrá usar hasta nuevo aviso.");
             embed.setThumbnail("https://cdn.discordapp.com/avatars/454682928769663007/14ac96f716c195bf55d7373778bd092c.png");
             embed.setTimestamp();
             message.channel.send(embed);
             message.channel.send("@everyone");
             }
-          }
+      }
+      if (command === "botdormir"){
+        message.delete();
+        if (message.channel.name == "anuncios-server"){
+        var embed = new Discord.RichEmbed()
+        embed.setColor(0xf85959);     
+        embed.setTitle("BOT INOPERATIVO");
+        embed.setDescription("Gente, me voy a dormir. hasta mañana estaré inoperativo. Buenas Noches");
+        embed.setThumbnail("https://cdn.discordapp.com/avatars/454682928769663007/14ac96f716c195bf55d7373778bd092c.png");
+        embed.setTimestamp();
+        message.channel.send(embed);
+        message.channel.send("@everyone");
+        }
+  }
 
         if (command === "botoperativo"){
             message.delete();
@@ -124,3 +137,4 @@ bot.on("message", async message => {
 
 
 bot.login(process.env.token);//doesnt work
+*/
