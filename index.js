@@ -1,4 +1,4 @@
-/*const Discord = require("discord.js");
+const Discord = require("discord.js");
 const configD = require("./node_modules/discord.js/config.json");
 const config = require("./node_modules/token/token.json"); //Testing porpouses
 const bot = new Discord.Client();
@@ -137,4 +137,4 @@ bot.on("message", async message => {
 
 
 bot.login(process.env.token);//doesnt work
-*/
+
