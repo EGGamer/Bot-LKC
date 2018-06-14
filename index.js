@@ -112,8 +112,8 @@ bot.on("message", async message => {
           var embed = new Discord.RichEmbed()
           embed.setColor(0x39efbf);
           embed.setTitle("Reputaciones Actuales");
-          embed.addField("EG Gamer", "**37**, **37**, **38**, **2**");
-          embed.addField("Hyren", "**37**, **39**, **37**, **2**");
+          embed.addField("EG Gamer", "**38**, **38**, **38**, **2**");
+          embed.addField("Hyren", "**37**, **39**, **38**, **2**");
           embed.addField("Fran", "**30**, **28**, **27**, **1**");
           embed.addField("Carlis", "**?**, **?**, **?**, **?**");
           embed.addField("Cutu", "**?**, **?**, **?**, **?**");
