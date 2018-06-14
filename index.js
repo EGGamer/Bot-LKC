@@ -10,6 +10,8 @@ bot.on("ready", function(){
     bot.user.setActivity("-kAyuda");
 });
 
+
+
 bot.on("message", async message => {
         
       if (message.author.bot) return;
@@ -71,7 +73,7 @@ bot.on("message", async message => {
             var embed = new Discord.RichEmbed()
             embed.setColor(0xf85959);     
             embed.setTitle("BOT INOPERATIVO");
-            embed.setDescription("El bot no se podrá usar hasta nuevo aviso.");
+            embed.setDescription("El bot no se podrá usar hasta nuevo aviso. Estamos haciendo arreglos en la estructura del bot.");
             embed.setThumbnail("https://cdn.discordapp.com/avatars/454682928769663007/14ac96f716c195bf55d7373778bd092c.png");
             embed.setTimestamp();
             message.channel.send(embed);
@@ -123,7 +125,7 @@ bot.on("message", async message => {
        }
       }
       
-      
+  
       
 });
 
